@@ -123,4 +123,3 @@ max_features → sqrt | log2 | 0.5 | 0.8
 | `max_features` | **0.8** |
 | `min_samples_split` | **4** |
 | `min_samples_leaf` | **1** |
-| Best 5-Fold CV R² | **1.00** ✅ |
