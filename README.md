@@ -57,10 +57,11 @@ This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking
 
 | Column | Example Before | Example After |
 |---|---|---|
-| `BookingChannel` | `"online"` | `2` |
 | `PaymentType` | `"card"` | `0` |
-| `RoomType` | `"suite"` | `3` |
 | `BrandTier` | `"luxury"` | `1` |
+| `BookingChannel` | `"online"` | `2` |
+| `RoomType` | `"suite"` | `3` |
+
 
 > ⚙️ Tool used: `sklearn.preprocessing.LabelEncoder` — applied independently per column
 
