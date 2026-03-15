@@ -107,3 +107,20 @@ This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking
 > Systematic optimisation using RandomizedSearchCV with 5-Fold Cross Validation
 
 **Search Space Explored:**
+
+n_estimators → 200 to 700 (number of trees)
+max_depth → 5 to 30 (tree depth)
+min_samples_split → 2 to 12
+min_samples_leaf → 1 to 8
+max_features → sqrt | log2 | 0.5 | 0.8
+
+**🏆 Best Parameters Found — Random Forest:**
+
+| Parameter | Best Value |
+|---|---|
+| `n_estimators` | **684** |
+| `max_depth` | **27** |
+| `max_features` | **0.8** |
+| `min_samples_split` | **4** |
+| `min_samples_leaf` | **1** |
+| Best 5-Fold CV R² | **1.00** ✅ |
