@@ -1,4 +1,4 @@
-This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking hospitality dataset with 26 features spanning customer demographics, property attributes, and market dynamics. Five custom features are engineered — SpendPerNight, DemandPressure, EventDistanceInteraction, PriceCompetitiveness, and CustomerValueIndex to capture real-world pricing behaviour. Three models are compared (Linear Regression R²=0.98, Decision Tree R²=0.99, Random Forest R²=0.9964), with the tuned Random Forest selected via 5-Fold RandomizedSearchCV as the production model.
+This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking hospitality dataset with 26 features spanning customer demographics, property attributes, and market dynamics. Five custom features are engineered: SpendPerNight, DemandPressure, EventDistanceInteraction, PriceCompetitiveness, and CustomerValueIndex to capture real-world pricing behaviour. Three models are compared (Linear Regression R²=0.98, Decision Tree R²=0.99, Random Forest R²=0.9964), with the tuned Random Forest selected via 5-Fold RandomizedSearchCV as the production model.
 
 ## 📒 Notebook Sections
 
@@ -14,13 +14,13 @@ This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking
 ---
 
 ### 2️⃣ 📦 Data Loading
-> Authentic hotel bookings & performance data — individual stay granularity
+> Authentic hotel bookings & performance data, individual stay granularity
 
 | Detail | Value |
 |---|---|
 | 📊 Observations | 6,630 rows |
 | 📋 Variables | 26 columns |
-| 🎯 Target Variable | `ADR_RM` — Average Daily Rate in RM |
+| 🎯 Target Variable | `ADR_RM` : Average Daily Rate in RM |
 | 🏨 Granularity | One row = One individual hotel booking |
 
 ---
@@ -35,7 +35,7 @@ This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking
 | `CustomerAge` | 101 | 🟡 Mean | Retain central tendency |
 | `ReviewScore` | 141 | 🟡 Mean | Retain central tendency |
 | `CompetitorAvgRateRM` | — | 🟡 Mean | Avoid pricing model bias |
-| `ADR_RM` | 31 | 🟡 Mean | Target variable — minimal intervention |
+| `ADR_RM` | 31 | 🟡 Mean | Target variable : minimal intervention |
 
 ---
 
@@ -97,7 +97,7 @@ This project predicts nightly hotel room rates (ADR in RM) using a 6,630-booking
 |---|---|---|---|---|
 | 📏 Linear Regression | 0.9829 | 11.69 | 20.46 | ✅ Great baseline, assumes linearity |
 | 🌿 Decision Tree | 0.9923 | 7.65 | 13.77 | ✅ Captures non-linear patterns |
-| 🌲 **Random Forest** | **0.9964** | **4.38** | **9.34** | ⭐ Best — stable & robust |
+| 🌲 **Random Forest** | **0.9964** | **4.38** | **9.34** | ⭐ Best : stable & robust |
 
 > 💡 Random Forest wins because it combines hundreds of decision trees, reducing overfitting and capturing complex interactions between demand, occupancy, and competitor pricing.
 
